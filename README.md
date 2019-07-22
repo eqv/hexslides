@@ -13,22 +13,24 @@ Hexslides is an opinionated presentation tool:
 Hexslides allows you to create presentations with highly expressive animations in your favorite vector graphic drawing tool (such as Inkscape).
 Then you combine svg graphics and masters/templates in beautifull presentations.
 
-Create highly visual presentations, that support what you are talking about instead of distracting from it!
+#### Create highly visual presentations, that support what you are talking about instead of distracting from it!
 ![example slides](examples/imgs/visual.png)
 
-Easily create animations to better present your ideas!
-<p float="left">
+#### Easily create animations to better present your ideas!
+
+<p float="left" align="center">
    <img src="examples/imgs/anim2.gif" width="30%" />
    <img src="examples/imgs/anim1.gif" width="30%" />
   <img src="examples/imgs/anim3.gif" width="30%" />
 </p>
 
-Use textex for your math typesetting needs, and combine them with easy, manual layouting for complex situations and
+#### Use textex for your math typesetting needs, and combine them with easy, manual layouting for complex situations and
 animations!
-![example math](examples/imgs/math.gif)
+<p align="center">
+<img src="examples/imgs/math.gif" width="40%"/>
+</p>
 
-
-Use custom color replacement rules to convert your graphics from one template/style to another!
+#### Use custom color replacement rules to convert your graphics from one template/style to another!
 ![example themes](examples/imgs/colors.png)
 
 
