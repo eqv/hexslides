@@ -24,8 +24,7 @@ Then you combine svg graphics and masters/templates in beautifull presentations.
   <img src="examples/imgs/anim3.gif" width="30%" />
 </p>
 
-#### Use textex for your math typesetting needs, and combine them with easy, manual layouting for complex situations and
-animations!
+#### Use textex for your math typesetting needs, and combine them with easy, manual layouting for complex situations and animations!
 <p align="center">
 <img src="examples/imgs/math.gif" width="40%"/>
 </p>
@@ -76,6 +75,7 @@ Tricks
 * Typically you will store all elements of a single animation in one svg and use one `\slide` command to
   generate a slide from this. However, you can easily split larger animation across multiple svg files or `\slide`
   commands. This is helpfull to maintain easy editing (changing frame numbers can be hard for animations with many steps).
+* layers starting with `__` are not exported. You can use this to create a backdrop that contains the theme. That way you know exactly what your slide will look like in the final version.
 * Links to inkscape tutorials
 
 Install
