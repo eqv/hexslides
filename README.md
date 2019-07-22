@@ -17,13 +17,15 @@ Create highly visual presentations, that support what you are talking about inst
 ![example slides](examples/imgs/visual.png)
 
 Easily create animations to better present your ideas!
-![example animation 1](examples/imgs/anim2.gif)
-![example animation 2](examples/imgs/anim1.gif)
-![example animation 3](examples/imgs/anim3.gif)
+<p float="left">
+   <img src="examples/imgs/anim2.gif" width="30%" />
+   <img src="examples/imgs/anim1.gif" width="30%" />
+  <img src="examples/imgs/anim3.gif" width="30%" />
+</p>
 
 Use textex for your math typesetting needs, and combine them with easy, manual layouting for complex situations and
 animations!
-![example math](/data/talks/template_1629/slides/examples/imgs/math.gif)
+![example math](examples/imgs/math.gif)
 
 
 Use custom color replacement rules to convert your graphics from one template/style to another!
