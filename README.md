@@ -41,7 +41,7 @@ individual layer into one individual `.pdf` file stored in `imgs/generated/$file
 to compile all images into a full presentations.
 
 For example, the following code is used to show `layer1` in all frames, `layer2` only in frame 2 to 4 while `layer3` is shown in frames 3 and 5. You can 
-Specify visibility using the typicall (for Latex-Beamer) notations such as `3-4,5,7`.
+specify visibility using the typicall (for Latex-Beamer) notations such as `3-4,5,7`.
 
 ```
 \slide{
