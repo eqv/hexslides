@@ -5,8 +5,16 @@
 \begin{document}
 \input{theme/commands.tex}
 
+%create a slide with default background and foreground
 \slide{
-  \asvg{1}{title_title}
+  \asvg{1-}{example_layer1}  %visible in all frames
+  \asvg{2-4}{example_layer2} %visible in frames 2 to 4
+  \asvg{3,4}{example_layer3} %visible in frames 3 and 4
+}
+
+%specify custom background and foreground if needed.
+\slidecustom{template_clear_bg}{template_foreground}{
+  \asvg{1}{example_layer1}
 }
 
 \end{document}

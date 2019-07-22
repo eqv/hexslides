@@ -38,7 +38,7 @@ How Does it Work?
 
 For each animation (or slide), you create a simple `.svg` file, that contains all moving objects as layers. The script `gen.rb` converts each
 individual layer into one individual `.pdf` file stored in `imgs/generated/$filename_$layername.pdf`. Then we use Latex
-to compile all images into a full presentations.
+to compile all images into a full presentations. To get started, you can copy `imgs/example.svg` and modify it!
 
 For example, the following code is used to show `layer1` in all frames, `layer2` only in frame 2 to 4 while `layer3` is shown in frames 3 and 5. You can 
 specify visibility using the typicall (for Latex-Beamer) notations such as `3-4,5,7`.
@@ -57,8 +57,9 @@ layouts/masters.
 
 
 ```
+
 \slidecustom{template_clear_bg}{template_foreground}{
-  \asvg{1}{exmaple_layer1}
+  \asvg{1}{example_layer1}
 }
 ```
 
@@ -75,8 +76,16 @@ Tricks
 * Typically you will store all elements of a single animation in one svg and use one `\slide` command to
   generate a slide from this. However, you can easily split larger animation across multiple svg files or `\slide`
   commands. This is helpfull to maintain easy editing (changing frame numbers can be hard for animations with many steps).
-* layers starting with `__` are not exported. You can use this to create a backdrop that contains the theme. That way you know exactly what your slide will look like in the final version.
-* Links to inkscape tutorials
+* Layers starting with `__` are not exported. You can use this to create a backdrop that contains the theme. That way you know exactly what your slide will look like in the final version.
+* You can edit pdfs in inkscape. This is very usefull to reuse figures or plots from other sources.
+* A list of inkscape tutorials that you might find helpfull: 
+    * [getting started](https://www.youtube.com/watch?v=XP-Cyn0leP8)
+    * [getting started 2](https://www.youtube.com/watch?v=i12Oth28iZM)
+    * [getting started 3](https://www.youtube.com/watch?v=Jsqfag9DSU8)
+    * [text ribbons](https://www.youtube.com/watch?v=wQHC38-6phs)
+    * [flow charts](https://www.youtube.com/watch?v=G5LI695MiLY)
+    * [edit pdf figures](https://www.youtube.com/watch?v=hLyox9Kj8o8)
+
 
 Install
 ------
@@ -91,7 +100,6 @@ unzip 9260a2461344.zip
 cp -r pv-textext-9260a2461344 ~/.config/inkscape/extensions 
 ```
 
-Import the `theme/hexgolems_theme.gpl` as custom color palete in Inkscape, colors will be auto converted for dark/bright
-themes as necessary.
+Import the `theme/hexgolems_theme.gpl` as custom color palete in Inkscape.
 
 Use the textex plugin to render Latex in your svgs, and the provided macros to display the generated pdfs.
