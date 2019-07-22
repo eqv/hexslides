@@ -35,10 +35,11 @@ Then you combine svg graphics and masters/templates in beautifull presentations.
 
 How Does it Work?
 ----------
+In short: create `svg` files in `imgs/`. Specify which layers are part of which slide by modifying `slides.tex`. Run `make` and enjoy your freshly crafted `slides.pdf`. To get started, you can copy `imgs/example.svg` and modify it!
 
-For each animation (or slide), you create a simple `.svg` file, that contains all moving objects as layers. The script `gen.rb` converts each
+A bit longer: for each animation (or slide), you create a simple `.svg` file, that contains all moving objects as layers. The script `gen.rb` (which is called by the makefile) converts each
 individual layer into one individual `.pdf` file stored in `imgs/generated/$filename_$layername.pdf`. Then we use Latex
-to compile all images into a full presentations. To get started, you can copy `imgs/example.svg` and modify it!
+to compile all images into a full presentations. 
 
 For example, the following code is used to show `layer1` in all frames, `layer2` only in frame 2 to 4 while `layer3` is shown in frames 3 and 5. You can 
 specify visibility using the typicall (for Latex-Beamer) notations such as `3-4,5,7`.
