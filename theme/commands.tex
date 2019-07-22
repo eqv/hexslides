@@ -1,0 +1,17 @@
+\newcommand{\svg}[1]{\put(-28.5,-147.1){\includegraphics[width=1\paperwidth]{imgs/generated/#1.pdf}}}
+
+\newcommand{\asvg}[2]{\visible<#1>{\svg{#2}}}
+
+\newcommand{\slide}[1]{\slidecustom{template_clear_bg}{template_foreground}{#1}}
+
+\newcommand{\slidecustom}[3]{%
+{%
+\begin{frame}
+\begin{picture}(1,1)%
+\asvg{1-}{#1}%
+#3%
+\asvg{1-}{#2}%
+\end{picture}
+\end{frame}
+}%
+}
