@@ -29,7 +29,7 @@ Then you combine svg graphics and masters/templates in beautiful presentations.
 <img src="examples/imgs/math.gif" width="40%"/>
 </p>
 
-#### Automatically generate handouts that work well with Animations!
+#### Automatically generate handouts that work well with animations!
 ![example handout](examples/imgs/handouts.png)
 
 #### Use custom color replacement rules to convert your graphics from one template/style to another!
@@ -47,7 +47,7 @@ to compile all images into a full presentations.
 For example, the following code is used to show `layer1` in all frames, `layer2` only in frame 2 to 4 while `layer3` is shown in frames 3 and 5. You can 
 specify visibility using the typicall (for Latex-Beamer) notations such as `3-4,5,7`.
 
-```
+```latex
 \slide{
   \asvg{1-}{example_layer1}
   \asvg{2-4}{example_layer2}
@@ -60,8 +60,7 @@ foreground image. By default `\slide` uses the background from `imgs/template.sv
 layouts/masters.
 
 
-```
-
+```latex
 \slidecustom{template_clear_bg}{template_foreground}{
   \asvg{1}{example_layer1}
 }
@@ -72,7 +71,7 @@ Handouts
 Hexslides has first class support for generating handouts. By simply running `make handout` a handout version of the slides is generated. You 
 can use the `anote{}` command to embedd a minipage that will only appear in the handouts. In contrast to beamer handouts will include each frame by default as our slides typically make heavy  use of animations. However, note how `\slide` and `\slidecustom` both take an additional optional argument that specifies which frames to include in the handouts. This is very usefull if you do not want to include all frames, but still want to include some animations.
 
-```
+```latex
 %create a slide with default background and foreground
 % only print frame 1 and 4 in the handouts
 \slide[1,4]{ 
@@ -116,7 +115,7 @@ Tricks
 Install
 ------
 
-```
+```sh
 apt-get install inkscape gimp texlive-full texlive-lang-german texlive-doc-de texlive-latex-extra latex-mk
 cp theme/hexgolems_theme.gpl ~/.config/inkscape/palettes/
 mkdir /tmp/textext
