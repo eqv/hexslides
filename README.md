@@ -8,10 +8,10 @@ Hexslides is an opinionated presentation tool:
 * Slides should be primarily consist of graphic elements.
 * Animations are the most important tool to convey complex ideas.
 * I hate Powerpoint - There is nothing worse than elements jumping a few pixels from one slide to the next (but I like GUIs to create graphics).
-* I hate Latex Beamer (but like text based slide specifications that produce beautifull pdfs).
+* I hate Latex Beamer (but like text based slide specifications that produce beautiful pdfs).
 
 Hexslides allows you to create presentations with highly expressive animations in your favorite vector graphic drawing tool (such as Inkscape).
-Then you combine svg graphics and masters/templates in beautifull presentations.
+Then you combine svg graphics and masters/templates in beautiful presentations.
 
 #### Create highly visual presentations, that support what you are talking about instead of distracting from it!
 ![example slides](examples/imgs/visual.png)
@@ -28,6 +28,9 @@ Then you combine svg graphics and masters/templates in beautifull presentations.
 <p align="center">
 <img src="examples/imgs/math.gif" width="40%"/>
 </p>
+
+#### Automatically generate handouts that work well with Animations!
+![example handout](examples/imgs/handouts.png)
 
 #### Use custom color replacement rules to convert your graphics from one template/style to another!
 ![example themes](examples/imgs/colors.png)
@@ -61,6 +64,28 @@ layouts/masters.
 
 \slidecustom{template_clear_bg}{template_foreground}{
   \asvg{1}{example_layer1}
+}
+```
+
+Handouts
+-------
+Hexslides has first class support for generating handouts. By simply running `make handout` a handout version of the slides is generated. You 
+can use the `anote{}` command to embedd a minipage that will only appear in the handouts. In contrast to beamer handouts will include each frame by default as our slides typically make heavy  use of animations. However, note how `\slide` and `\slidecustom` both take an additional optional argument that specifies which frames to include in the handouts. This is very usefull if you do not want to include all frames, but still want to include some animations.
+
+```
+%create a slide with default background and foreground
+% only print frame 1 and 4 in the handouts
+\slide[1,4]{ 
+  \anote{
+    \begin{itemize}
+      \visible<1->{\item This slide displays a set of animated frames}
+      \visible<4>{\item layer 2 is visible in frames 2 to 4. Note that frame 4 is actually the same as frame 3}
+      \visible<4>{\item layer 3 is visible in frames 3 and 4}
+    \end{itemize}
+  }%
+  \asvg{1-}{example_layer1}  %visible in all frames
+  \asvg{2-4}{example_layer2} %visible in frames 2 to 4
+  \asvg{3,4}{example_layer3} %visible in frames 3 and 4
 }
 ```
 

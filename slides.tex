@@ -6,15 +6,24 @@
 \input{theme/commands.tex}
 
 %create a slide with default background and foreground
-\slide{
+% only print frame 1 and 4 in the handouts
+\slide[1,4]{ 
+  \anote{
+    \begin{itemize}
+      \visible<1->{\item This slide displays a set of animated frames}
+      \visible<4>{\item layer 2 is visible in frames 2 to 4. Note that frame 4 is actually the same as frame 3}
+      \visible<4>{\item layer 3 is visible in frames 3 and 4}
+    \end{itemize}
+  }%
   \asvg{1-}{example_layer1}  %visible in all frames
   \asvg{2-4}{example_layer2} %visible in frames 2 to 4
   \asvg{3,4}{example_layer3} %visible in frames 3 and 4
 }
 
 %specify custom background and foreground if needed.
-\slidecustom{template_clear_bg}{template_foreground}{
-  \asvg{1}{example_layer1}
+\slidecustom{template_clear_bg}{template_foreground}{%
+  \asvg{1}{example_layer1}%
+  \anote{This slide specifies a custom backround and foreground layer}%
 }
 
 \end{document}
