@@ -58,7 +58,13 @@ class SvgAnim < Generator
 		puts "mkdir_p #{out_dir}"
 		FileUtils.mkdir_p(out_dir)
     File.open(out_file+".svg","w"){|f| f.puts xml_str }
-    system("inkscape", "-f",out_file+".svg", "-A", out_file+".pdf")
+
+    # version 0.9
+    cmd = ["inkscape", "-f",out_file+".svg", "-A", out_file+".pdf"]
+    # version 1.0
+    cmd = ["inkscape", "--export-filename",out_file+".pdf", out_file+".svg"]
+    puts(cmd.join(" "))
+    system(*cmd)
   end
 
   def generate_frame(dom,layer)
