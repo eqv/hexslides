@@ -63,6 +63,8 @@ class SvgAnim < Generator
     cmd = ["inkscape", "-f",out_file+".svg", "-A", out_file+".pdf"]
     # version 1.0
     cmd = ["inkscape", "--export-filename",out_file+".pdf", out_file+".svg"]
+    # version 1.2
+    cmd = ["inkscape", "--export-type=pdf", out_file+".svg"] 
     puts(cmd.join(" "))
     system(*cmd)
   end
